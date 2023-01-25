@@ -2,7 +2,7 @@
 require_once "view_begin.php";
 ?>
 
-<main class="mx-auto" style="width: 150vh">
+<main class="mx-auto" style="width: 150vh; margin-top: 50px">
 
     <div class="container">
         <div class="row">
@@ -44,7 +44,7 @@ require_once "view_begin.php";
     </div>
     <hr class="mx-auto" style="margin-top: 75px">
 
-    <form>
+    <form id="demande-devis">
         <div class="form-group mx-auto" style="width: 70vh; margin-top: 75px">
             <label for="exampleFormControlInput1">Email :</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="votremail@mail.com">
