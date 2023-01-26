@@ -2,9 +2,12 @@
 require_once "view_begin.php";
 ?>
 
-<main class="mx-auto" style="width: 150vh; margin-top: 50px">
+<main class="mx-auto" style="width: 150vh; margin-top: 50px; border: solid 1px lightgray; border-radius: 10px; background-color: white">
 
-    <div class="container">
+    <hr class="mx-auto" style="margin-top: 50px; width: 95%">
+
+    <h2 class="mx-auto" style="margin-top: 40px; width: 70vh; text-align: center" id="nos-services">Nos services</h2>
+    <div class="container" style="margin-top: 35px">
         <div class="row">
             <div class="col-sm " >
                 <div class="card" style="width: 18rem;">
@@ -42,10 +45,13 @@ require_once "view_begin.php";
 
         </div>
     </div>
-    <hr class="mx-auto" style="margin-top: 75px">
 
-    <form id="demande-devis">
-        <div class="form-group mx-auto" style="width: 70vh; margin-top: 75px">
+
+    <hr class="mx-auto" style="margin-top: 75px; width: 95%">
+
+    <h2 class="mx-auto" style="margin-top: 60px; width: 70vh; text-align: center">Demander un devis en ligne</h2>
+    <form id="demande-devis" style="margin-top: 25px">
+        <div class="form-group mx-auto" style="width: 70vh">
             <label for="exampleFormControlInput1">Email :</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="votremail@mail.com">
         </div>
@@ -72,4 +78,5 @@ require_once "view_begin.php";
 
 
 </main>
+</body>
 </html>
