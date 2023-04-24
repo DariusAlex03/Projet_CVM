@@ -1,7 +1,13 @@
 <?php
 class Controller_home extends Controller{
+
+    public function action_home(){
+        $data = false;
+        $this->render('home', $data);
+    }
+
     public function action_default()
     {
-        // TODO: Implement action_default() method.
+        $this->action_home();
     }
 }

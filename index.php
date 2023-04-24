@@ -1,9 +1,8 @@
 <?php
-require_once "Utils/function.php";
 require_once "Model/Model.php";
 require_once "Controller/Controller.php";
 
-$controllers = ["accueil", "article", "commande", "compte", "historique", "identification", "inventaire"];
+$controllers = ["home", "identification", "list"];
 $controller_default = "identification";
 
 if (isset($_GET["controller"]) and in_array($_GET["controller"], $controllers))

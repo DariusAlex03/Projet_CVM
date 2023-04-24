@@ -4,13 +4,13 @@
 <head>
     <title>CVM RENOVATION</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../Content/Images/logo_haut.png">
+    <link rel="shortcut icon" href="Content/Images/logo_haut.png">
 </head>
 
 <body style="background-color: aliceblue">
     <header>
         <div class=" grid mx-auto" style=" width:180vh; height: 170px; border-right: solid 1px lightgray; border-left: solid 1px lightgray; padding-top: 0px; background: rgb(2,0,36); background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(5,20,83,1) 27%, rgba(9,92,121,1) 54%, rgba(0,212,255,1) 100%);">
-            <div class="g-col-2" style="background-color: aqua; width: 30%; height: 170px; background-image: url(../Content/Images/logo_cvm.png); background-size: 90% 90% ; background-repeat: no-repeat">
+            <div class="g-col-2" style="background-color: aqua; width: 30%; height: 170px; background-image: url(Content/Images/logo_cvm.png); background-size: 90% 90% ; background-repeat: no-repeat">
             </div>
             <div class="g-col-2" style="background-color: blanchedalmond; width: 30%">
                 <button>Se connecter</button>

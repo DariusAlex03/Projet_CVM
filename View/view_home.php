@@ -2,7 +2,7 @@
 require_once "view_begin.php";
 ?>
 
-<main class="mx-auto" style="width: 150vh; margin-top: 50px; border: solid 1px lightgray; border-radius: 10px; background-color: white">
+<main class="mx-auto" style="width: 165vh; margin-top: 50px; border: solid 1px lightgray; border-radius: 10px; background-color: white">
 
     <hr class="mx-auto" style="margin-top: 50px; width: 95%">
 
@@ -10,8 +10,8 @@ require_once "view_begin.php";
     <div class="container" style="margin-top: 35px">
         <div class="row">
             <div class="col-sm " >
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="/Content/Images/electricite.jpg" alt="Card image cap">
+                <div class="card" style="width: 21rem;">
+                    <img class="card-img-top" src="Content/Images/electricite.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -21,8 +21,8 @@ require_once "view_begin.php";
                 </div>
             </div>
             <div class="col-sm ">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="/Content/Images/polmberie.jpg" alt="Card image cap">
+                <div class="card" style="width: 21rem;">
+                    <img class="card-img-top" src="Content/Images/polmberie.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -32,8 +32,8 @@ require_once "view_begin.php";
                 </div>
             </div>
             <div class="col-sm ">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="/Content/Images/electricite.jpg" alt="Card image cap">
+                <div class="card" style="width: 21rem;">
+                    <img class="card-img-top" src="Content/Images/electricite.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
