@@ -160,6 +160,13 @@ class Model
         return $requete->fetchAll();
     }
 
+    public function getDemandesSpec($id){
+        $requete = $this->bd->prepare("SELECT * FROM demandes where id=:id");
+        $requete->bindValue("id", $id);
+        $requete->execute();
+        return $requete->fetchAll();
+    }
+
     public function supprimerDemande($id){
         $requette = $this->bd->prepare("DELETE from demandes where id = :id");
         $requette->bindValue("id", $id);

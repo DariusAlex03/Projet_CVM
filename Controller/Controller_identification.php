@@ -5,6 +5,7 @@ class Controller_identification extends Controller{
     public function action_identification(){
         $m = Model::getModel();
         $data = $m->getDemandes();
+        session_start();
         if(isset($_POST['identifiant'])&& isset($_POST['mdp'])){
             $mdp = $m->getMotDePasse($_POST['identifiant']);
             $identifiant = $_POST['identifiant'];
@@ -45,6 +46,11 @@ class Controller_identification extends Controller{
         else {
             $this->render("signin", $data);
         }
+    }
+
+    public function action_destroy(){
+        session_destroy();
+        $this->action_identification();
     }
 
     public function action_default()

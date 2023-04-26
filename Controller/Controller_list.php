@@ -15,7 +15,14 @@ class Controller_list extends Controller{
         $this->render('control', $data);
     }*/
     public function action_demande(){
-
+        $m = Model::getModel();
+        if (isset($_GET["id"])){
+            $data = $m->getDemandesSpec($_GET["id"]);
+            $this->render("demande", $data);
+        }
+        else{
+            $this->action_default();
+        }
     }
     public function action_default()
     {
