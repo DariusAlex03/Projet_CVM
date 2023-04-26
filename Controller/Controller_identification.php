@@ -1,10 +1,10 @@
 <?php
-
+require_once "Model/Model.php";
 class Controller_identification extends Controller{
 
     public function action_identification(){
         $m = Model::getModel();
-        $data = [];
+        $data = $m->getDemandes();
         if(isset($_POST['identifiant'])&& isset($_POST['mdp'])){
             $mdp = $m->getMotDePasse($_POST['identifiant']);
             $identifiant = $_POST['identifiant'];

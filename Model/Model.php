@@ -91,7 +91,7 @@ class Model
 
     public function ajouterCompte($identifiant, $nom, $prenom,  $motDePasse){
         $requette = $this->bd->prepare("INSERT INTO administrateur(mail, nom, prenom, mdp, role, date_creation ) VALUES (:identifiant , :nom , :prenom, :motDePasse, :role, :date)");
-        $role = 'utilisateur';
+        $role = 'administrateur';
         $motDePasseHash = crypt($motDePasse, 'md5');
         $dt = 1649318400;
         $date_creation = date("Y-m-d", $dt);
@@ -100,8 +100,70 @@ class Model
             'nom' => $nom ,
             'prenom' => $prenom ,
             'motDePasse' => $motDePasseHash,
-            'role' => "administrateur",
+            'role' => $role,
             'date' => $date_creation));
+    }
+
+    public function ajoutDemande($nom, $prenom, $mail, $tel, $description){
+        $requette = $this->bd->prepare("INSERT INTO demandes(nom, prenom, mail, nr_tel, description) VALUES (:nom, :prenom, :mail, :tel, :description)");
+        $requette->execute(array(
+            'nom' => $nom ,
+            'prenom' => $prenom ,
+            'mail' => $mail,
+            'tel' => $tel,
+            'description' => $description));
+    }
+
+    public function getDemandeNom($id){
+        $requette = $this->bd->prepare("SELECT nom FROM demandes where id = :id");
+        $requette->bindValue("id", $id);
+        $requette->execute();
+        $tableau = $requette->fetch(PDO::FETCH_NUM);
+        return $tableau[0];
+    }
+
+    public function getDemandePrenom($id){
+        $requette = $this->bd->prepare("SELECT prenom FROM demandes where id = :id");
+        $requette->bindValue("id", $id);
+        $requette->execute();
+        $tableau = $requette->fetch(PDO::FETCH_NUM);
+        return $tableau[0];
+    }
+
+    public function getDemandeMail($id){
+        $requette = $this->bd->prepare("SELECT mail FROM demandes where id = :id");
+        $requette->bindValue("id", $id);
+        $requette->execute();
+        $tableau = $requette->fetch(PDO::FETCH_NUM);
+        return $tableau[0];
+    }
+
+    public function getDemandeTel($id){
+        $requette = $this->bd->prepare("SELECT nr_tel FROM demandes where id = :id");
+        $requette->bindValue("id", $id);
+        $requette->execute();
+        $tableau = $requette->fetch(PDO::FETCH_NUM);
+        return $tableau[0];
+    }
+
+    public function getDemandeDescription($id){
+        $requette = $this->bd->prepare("SELECT description FROM demandes where id = :id");
+        $requette->bindValue("id", $id);
+        $requette->execute();
+        $tableau = $requette->fetch(PDO::FETCH_NUM);
+        return $tableau[0];
+    }
+
+    public function getDemandes(){
+        $requete = $this->bd->prepare("SELECT * FROM demandes ORDER BY id DESC ");
+        $requete->execute();
+        return $requete->fetchAll();
+    }
+
+    public function supprimerDemande($id){
+        $requette = $this->bd->prepare("DELETE from demandes where id = :id");
+        $requette->bindValue("id", $id);
+        $requette->execute();
     }
 
 }
